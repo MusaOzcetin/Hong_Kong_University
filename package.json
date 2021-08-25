@@ -1,0 +1,29 @@
+{
+  "name": "hong_kong",
+  "version": "1.0.0",
+  "description": "\"Fresh Start\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MusaOzcetin/Hong_Kong_University.git"
+  },
+  "author": "Musa Özçetin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MusaOzcetin/Hong_Kong_University/issues"
+  },
+  "homepage": "https://github.com/MusaOzcetin/Hong_Kong_University#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0"
+  }
+}
