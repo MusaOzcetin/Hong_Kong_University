@@ -47,12 +47,12 @@
                     <form>
                         <div class="form-row row">
                             <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm me-1" id="exampleInputEmail3" placeholder="Enter email">
+                                <label class="sr-only" for="exampleInputEmail4">Email address</label>
+                                <input type="email" class="form-control form-control-sm me-1" id="exampleInputEmail4" placeholder="Enter email">
                             </div>
                             <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm me-1" id="exampleInputPassword3" placeholder="Password">
+                                <label class="sr-only" for="exampleInputPassword4">Password</label>
+                                <input type="password" class="form-control form-control-sm me-1" id="exampleInputPassword4" placeholder="Password">
                             </div>
                             <div class="col-sm-auto">
                                 <div class="form-check form-group">
@@ -72,6 +72,60 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="contentinfo">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-md-10">
+                                <input type="radio" id="1modal" name="numbers" value="1">
+                                <label for="1modal" class="me-2">1</label>
+                                <input type="radio" id="2modal" name="numbers" value="2">
+                                <label for="2modal" class="me-2">2</label>
+                                <input type="radio" id="3modal" name="numbers" value="3">
+                                <label for="3modal" class="me-2">3</label>
+                                <input type="radio" id="4modal" name="numbers" value="4">
+                                <label for="4modal" class="me-2">4</label>
+                                <input type="radio" id="5modal" name="numbers" value="5">
+                                <label for="5modal" class="me-2">5</label>
+                                <input type="radio" id="6modal" name="numbers" value="6">
+                                <label for="6modal" class="me-2">6</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Section</label>
+                            <div class="col-md-4 btn-group" data-bs-toggle="buttons">
+                                    <button class="btn btn-success btn-sm active"> Non Smoking</button>
+                                    <button class="btn btn-danger btn-sm"> Smoking</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-md-10">
+                                <input type="text" class="col-md-3 me-3" placeholder="Date">
+                                <input type="text" class="col-md-3" placeholder="Time">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-10 offset-md-2">
+                                    <button type="submit" class="btn btn-secondary mt-3">Cancel</button>
+                                    <button type="submit" class=" btn btn-primary mt-3">Reserve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <header class="container-fluid p-5 mb-4 bg-light">
     <div class="container">
         <div class="row row-header">
@@ -82,10 +136,15 @@
             <div class="col-12 col-sm-3 align-self-center">
                 <img src="img/logo.png" class="img-fluid" alt="Logo">
             </div>
+
             <div class="col-12 col-sm-3 align-self-center d-grid gap-2">
+                <!--
                 <a role="button" href="#1" class="btn btn-block nav-link btn-warning text-decoration-none text-black"
                    data-bs-toggle="tooltip" data-bs-html="true" title="Or Call us at <br><strong>+852 12345678</strong>"
                    data-bs-placement="bottom">Reserve Table</a>
+                   -->
+                <a role="button" class="btn btn-block nav-link btn-warning text-decoration-none text-black"
+                   data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Table</a>
             </div>
         </div>
     </div>
@@ -167,7 +226,6 @@
             </div>
         </div>
     </div>
-
     <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
             <h3>Meet our Culinary Specialists</h3>
@@ -184,6 +242,7 @@
             </div>
         </div>
     </div>
+   <!--
     <div class="row row-content justify-content-center">
         <div class="col-12 col-sm-8">
             <div class="card">
@@ -207,6 +266,21 @@
                                 <label for="6" class="me-2">6</label>
                             </div>
                         </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Section</label>
+                            <div class="col-md-10">
+                                <label class="btn btn-success btn-sm active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-smoking
+                                </label>
+                                <label class="btn btn-danger btn-sm">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+                        </div>
+
+
                         <div class="form-group row">
                             <label class="col-md-2 col-form-label">Date and Time</label>
                             <div class="col-md-10">
@@ -222,7 +296,9 @@
             </div>
         </div>
     </div>
+    -->
 </div>
+
 
 <footer class="footer">
     <div class="container">
@@ -271,9 +347,11 @@
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
+        /*
         $(document).ready(function(){
             $('[data-bs-toggle="tooltip"]').tooltip();
         });
+         */
     </script>
 </body>
 </html>
